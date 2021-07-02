@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load account %}
+<header class="mb-auto">
+    <div>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+            {% if user.is_authenticated %}
+                <a class="nav-link{% if request.path == '/accounts/email/'%} active{% endif %}" href="{% url 'account_email' %}">{% user_display user %}</a>
+                <a class="nav-link{% if request.path == '/accounts/password/change/'%} active{% endif %}" href="{% url 'account_change_password' %}">{% trans "Change Password" %}</a>
+                <a class="nav-link{% if request.path == '/accounts/logout/'%} active{% endif %}" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
+            {% else %}
+                <a class="nav-link {% if request.path == '/accounts/login/'%} active{% endif %}" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+                <a class="nav-link {% if request.path == '/accounts/signup/'%} active{% endif %}" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+            {% endif %}
+
+        </nav>
+    </div>
+</header>
