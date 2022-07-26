@@ -59,6 +59,6 @@ templates
 └── base.html
 ```
 
-Then feel free to modify the templates and anjoy the result :art:
+Then feel free to modify the templates and enjoy the result :art:
 
 ![bootstrap_image](https://user-images.githubusercontent.com/23726173/124335432-e9e1b400-dba2-11eb-9341-a3e0813a8a2b.png)
